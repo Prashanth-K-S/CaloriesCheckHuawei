@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calories Check</string>
+    <string name="detect_food">Detect Food</string>
+    <string name="steps">Steps</string>
+    <string name="processing_image_please_wait">Processing Image, Please Wait ...</string>
+    <string name="detect_prescription">Detect Prescription</string>
+</resources>

@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+}
+apply plugin:'com.huawei.agconnect'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.caloriescheck"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.13.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // CameraX core library using the camera2 implementation
+    def camerax_version = "1.0.0-beta12"
+    // The following line is optional, as the core library is included indirectly by camera-camera2
+    implementation "androidx.camera:camera-core:${camerax_version}"
+    implementation "androidx.camera:camera-camera2:${camerax_version}"
+    // If you want to additionally use the CameraX Lifecycle library
+    implementation "androidx.camera:camera-lifecycle:${camerax_version}"
+    // If you want to additionally use the CameraX View class
+    implementation "androidx.camera:camera-view:1.0.0-alpha19"
+    // If you want to additionally use the CameraX Extensions library
+    implementation "androidx.camera:camera-extensions:1.0.0-alpha19"
+
+
+    // Object detection and tracking SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-object:2.0.1.302'
+    // Object detection and tracking model.
+    implementation 'com.huawei.hms:ml-computer-vision-object-detection-model:2.0.1.302'
+
+    // Image segmentation SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-segmentation:2.0.2.300'
+    // Image segmentation model.
+    implementation 'com.huawei.hms:ml-computer-vision-image-segmentation-body-model:2.0.2.300'
+    implementation 'com.huawei.hms:ml-computer-vision-image-segmentation-multiclass-model:2.0.2.300'
+
+    implementation 'com.airbnb.android:lottie:3.5.0'
+
+    implementation "androidx.cardview:cardview:1.0.0"
+
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+
+    implementation 'com.huawei.hms:ml-computer-vision-ocr:1.0.3.300' // Import the base SDK.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-cn-model:1.0.3.300'  // Import the Chinese and English model package.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-jk-model:1.0.3.300'  // Import the Japanese and Korean model package.
+    implementation 'com.huawei.hms:ml-computer-vision-ocr-latin-model:1.0.3.300'    // Import the Latin-based language model package.
+
+    implementation 'com.huawei.hms:hihealth-base:5.0.0.300'
+
+
+}
