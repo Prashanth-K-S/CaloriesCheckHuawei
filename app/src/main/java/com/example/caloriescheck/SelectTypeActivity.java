@@ -34,7 +34,7 @@ public class SelectTypeActivity extends AppCompatActivity {
         mSteps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(SelectTypeActivity.this, StepsActivity.class));
+                startActivity(new Intent(SelectTypeActivity.this, StepRecognitionActivity.class));
             }
         });
 

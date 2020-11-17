@@ -9,6 +9,11 @@
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.huawei.hms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BODY_SENSORS" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +22,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CaloriesCheck">
-        <activity android:name=".OCRActivity"></activity>
+        <activity android:name=".GetStartedActivity">
+
+        </activity>
+        <activity android:name=".StepRecognitionActivity" />
+        <activity android:name=".OCRActivity" />
         <activity android:name=".StepsActivity" />
         <activity android:name=".SelectTypeActivity">
             <intent-filter>
@@ -28,10 +37,26 @@
         </activity>
         <activity android:name=".MainActivity" />
 
+        <receiver
+            android:name=".LocationBroadcastReceiver"
+            android:exported="true">
+
+
+            　　　　
+            <intent-filter>
+
+
+                　　　　
+                <action android:name=".LocationBroadcastReceiver.ACTION_PROCESS_LOCATION" />
+
+
+                　　　　
+            </intent-filter>
+        </receiver>
+
         <meta-data
             android:name="com.huawei.hms.client.appid"
-            android:value="103258901"/>
-
+            android:value="103258901" />
     </application>
 
 </manifest>
