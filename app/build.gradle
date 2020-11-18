@@ -83,5 +83,8 @@ dependencies {
     implementation 'com.huawei.agconnect:agconnect-auth:1.4.0.300'
     implementation 'com.huawei.hms:hwid:4.0.4.300'
 
+    implementation 'com.huawei.hms:site:4.0.3.300'
+    implementation 'com.huawei.hms:maps:5.0.3.302'
+
 
 }
